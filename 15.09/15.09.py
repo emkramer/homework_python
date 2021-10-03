@@ -1,39 +1,66 @@
-list_ = [1, 1, 2, 2]
-g = set(list_)
-d = set('aabbcc')
-#print(g, d)
-'''
-set_1 = {1, 2, 3, 4, 5, 6}
-set_2 = {4, 5, 6, 7, 8, 9}
-print(set_1.isdisjoint(set_2))
-print(set_1.union(set_2))
-print(set_1.difference(set_2))
-print(set_1.symmetric_difference(set_2))
-cop = set_1.copy()
-print(cop)
-print('////////////////')
+import random
+
+x = [1,1,1,2,2,3,4,5]
+s = input("введите число:" )
+b = 4
+m = 10
+print(set(x))
+print(set(s))
+print(len(set(x)))
+print(b in x)
+print(m in x)
+#2/
+set_1 = {1,2,3,4,5,6}
+set_2 = {4,5,6,7,8,9}
+
+#3/
 set_1.update(set_2)
-print(set_1)
-set_1.symmetric_difference_update(set_2)
-print(set_1)
+print(set_1, set_2)
+set_1 = {1,2,3,4,5,6}
+set_2 = {4,5,6,7,8,9}
+set_2.intersection_update(set_1)
+print(set_1, set_2)
+set_1 = {1,2,3,4,5,6}
+set_2 = {4,5,6,7,8,9}
 set_1.difference_update(set_2)
+print(set_1, set_2)
+set_1 = {1,2,3,4,5,6}
+set_2 = {4,5,6,7,8,9}
+set_1.symmetric_difference_update(set_2)
+print(set_1, set_2)
+set_1 = {1,2,3,4,5,6}
+set_2 = {4,5,6,7,8,9}
+set_1.add(1098)
 print(set_1)
-set_2.add(3)
-print(set_2)
-set_1.remove(1)
+set_1.remove(6)
 print(set_1)
-set_1.clear()
+set_1.pop()
 print(set_1)
-'''
+set_1.clear
 
-l = [1, 1, 2, 2, 4, 5]
-h = [9, 8, 7, 6, 5, 4]
-def unique(l):
-    return list(set(l))
-#print(unique(l))
 
-def intersection_lists(l, h):
-    l, h = set(l), set(h)
-    return list(l & h)
+def unique(x):
+    return list(set(x))
 
-print(intersection_lists(l, h))
+
+def intersection(x,y):
+    pk = set(x)
+    pl = set(y)
+    return list(pk.intersection(pl))
+
+n = random.randint(0,50)
+x = list()
+for i in range(n):
+    x.append(random.randint(1, 50))
+print(x)
+print(unique(x))
+x = input('введите еще одно чиcло:')
+x_list = [ ]
+x2_list = [ ]
+n = random.randint(1,20)
+for i in range(n):
+    x_list.append(random.randint(1,10))
+for i in range(n):
+    x2_list.append(random.randint(1,10))
+print(x_list, x2_list)
+print(intersection(x_list, x2_list))
